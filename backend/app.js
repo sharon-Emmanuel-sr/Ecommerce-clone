@@ -24,7 +24,9 @@ if (process.env.NODE_ENV !== "PRODUCTION") {
         path: "config/.env",
     });
 };
+const product = require('./controller/product')
 app.use(bodyParser.json())
 app.use(ErrorHandler);
 app.use("/api/v2/user", router)
+app.use("/api/v2/product",router)
 module.exports = app;
